@@ -7,12 +7,12 @@ const websocketBaseQuery: BaseQueryFn = ({ query }) => {
     socket = new WebSocket('wss://echo.websocket.org');
 
     socket.onopen = () => {
-        console.log('WebSocket connection is live');
+      console.log('WebSocket connection is live');
       socket.send(JSON.stringify(query));
     };
 
     socket.onmessage = ({data}) => {
-     
+     console.log('got a msg')
       resolve({ data });
     };
 

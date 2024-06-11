@@ -9,6 +9,8 @@ const Chat: React.FC = () => {
     sendMessage( 'Hello, world!' );
   };
 
+  console.log(data)
+
   useEffect(() => {
     if (error) console.error('WebSocket error:', error);
   }, [error]);
